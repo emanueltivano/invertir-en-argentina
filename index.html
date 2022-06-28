@@ -15,16 +15,25 @@
 <body>
     <nav class="nav__menu">
         <a href="index.html" class="nav__logo">
+            <svg xmlns="http://www.w3.org/2000/svg" class="logo__icon" enable-background="new 0 0 24 24" height="30px" viewBox="0 0 24 24"
+                width="30px" fill="#fff">
+                <rect fill="none" height="24" width="24" />
+                <g>
+                    <path id="svg1" d="M7.5,21H2V9h5.5V21z" />
+                    <path id="svg2" d="M14.75,3h-5.5v18h5.5V3z" />
+                    <path id="svg3" d="M22,11h-5.5v10H22V11z" />
+                </g>
+            </svg>
             <h1>Invertir en Argentina</h1>
         </a>
 
         <ul>
-            <li><a href="./pages/variable.html">Renta Variable</a></li>
-            <li><a href="./pages/fija.html">Renta Fija</a></li>
-            <li><a href="./pages/fci.html">FCI y ETF</a></li>
-            <li><a href="./pages/derivados.html">Derivados</a></li>
+            <li><a class="nav__link" href="./pages/variable.html">Renta Variable</a></li>
+            <li><a class="nav__link" href="./pages/fija.html">Renta Fija</a></li>
+            <li><a class="nav__link" href="./pages/fci.html">FCI y ETF</a></li>
+            <li><a class="nav__link" href="./pages/derivados.html">Derivados</a></li>
         </ul>
-        
+
         <div class="menu--mobile">
             <img src="./assets/icons/menu.svg" alt="Menu Icon">
         </div>
@@ -35,15 +44,15 @@
         </div>
 
         <div class="carousel__content">
-            <img src="./assets/icons/before-arrow.svg" alt="Diapositiva anterior.">
+            <img src="./assets/icons/before-arrow.svg" class="btn__arrow" alt="Diapositiva anterior.">
 
             <div>
                 <h2 class="carousel__title">Primeros pasos para invertir</h2>
                 <p class="carousel__text">Aprende sobre como iniciar en el mundo de las inversiones.</p>
-                <button class="corousel__link">Ver más</button>
+                <button class="carousel__link">Ver más</button>
             </div>
 
-            <img src="./assets/icons/next-arrow.svg" alt="Diapositiva siguiente.">
+            <img src="./assets/icons/next-arrow.svg" class="btn__arrow" alt="Diapositiva siguiente.">
         </div>
     </header>
 
@@ -87,7 +96,7 @@
                     <p class="div__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro animi quia ab
                         officia deserunt maiores aspernatur ullam qui cupiditate suscipit optio non perspiciatis, quis
                         eaque ratione ipsa repellendus corrupti voluptatum.</p>
-                    <a href="./pages/variable.html" class="div__link">Aprender más</a>
+                    <button href="./pages/variable.html" class="div__link">Aprender más</button>
                 </div>
             </div>
         </div>
@@ -95,7 +104,7 @@
         <h4 class="div__title--alt">Instrumentos de Renta Variable</h4>
 
         <div class="div__carousel">
-            <img src="./assets/icons/before-arrow-alt.svg" alt="Anterior">
+            <img src="./assets/icons/before-arrow-alt.svg" class="btn__arrow" alt="Anterior">
 
             <div class="card card--alt principal">
                 <p class="card__title">Acciones</p>
@@ -118,7 +127,7 @@
                 <button class="card__button">Aprender más</button>
             </div>
 
-            <img src="./assets/icons/next-arrow-alt.svg" alt="Siguiente">
+            <img src="./assets/icons/next-arrow-alt.svg" class="btn__arrow" alt="Siguiente">
         </div>
 
         <div class="div__instrument">
@@ -139,7 +148,7 @@
         <h4 class="div__title--alt">Instrumentos de Renta Fija</h4>
 
         <div class="div__carousel">
-            <img src="./assets/icons/before-arrow-alt.svg" alt="Anterior">
+            <img src="./assets/icons/before-arrow-alt.svg" class="btn__arrow" alt="Anterior">
 
             <div class="card card--alt principal">
                 <p class="card__title">Bonos</p>
@@ -162,7 +171,7 @@
                 <button class="card__button">Aprender más</button>
             </div>
 
-            <img src="./assets/icons/next-arrow-alt.svg" alt="Siguiente">
+            <img src="./assets/icons/next-arrow-alt.svg" class="btn__arrow" alt="Siguiente">
         </div>
 
         <div class="div__instrument">
