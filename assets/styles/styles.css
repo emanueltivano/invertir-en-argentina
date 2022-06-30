@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    line-height: normal;
 }
 
 body {
@@ -65,6 +66,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: #fff;
+}
+
 #svg1 {
     animation: svgAnimation1;
     animation-duration: 2s;
@@ -92,34 +97,18 @@ h1 {
     color: #fff;
     font-weight: 500;
     font-size: 30px;
-    margin-left: 10px;
     margin-top: 2px;
+    margin-bottom: 0%;
 }
 
-.nav__menu {
-    position: sticky;
-    display: flex;
-    justify-content: space-between;
-    padding: 0px 25px;
-    align-items: center;
+.navbar {
     background-color: #0b0f91;
     color: #fff;
-    top: 0;
-    bottom: 0;
-    left: 0;
     height: 75px;
-    z-index: 999;
-    grid-area: navbar;
 }
 
-.nav__menu ul {
-    display: flex;
-    list-style-type: none;
-    align-items: center;
-}
-
-.nav__menu ul li {
-    padding: 15px 25px;
+.navbar ul li {
+    padding: 15px 20px;
 }
 
 .nav__link {
@@ -147,6 +136,10 @@ h1 {
     transition: .25s;
 }
 
+.nav__link:hover {
+    color: #fff;
+}
+
 .nav__link:hover:after {
     width: 70%;
     background: #fff;
@@ -164,17 +157,20 @@ h1 {
     background: #fff;
 }
 
-.menu--mobile {
-    display: none;
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    box-shadow: none;
 }
 
 header {
+    position: relative;
     padding: 0%;
     margin: 0%;
     grid-area: header;
 }
 
-.carousel {
+.carousel--bg {
     position: relative;
     width: 100%;
     height: calc(100vh - 190px);
@@ -188,9 +184,9 @@ header {
     -moz-filter: brightness(45%);
 }
 
-.carousel__content {
+.carousel {
     position: absolute;
-    top: 75px;
+    top: 0px;
     left: 0%;
     width: 100%;
     height: calc(100vh - 190px);
@@ -199,22 +195,6 @@ header {
     justify-content: space-around;
     align-items: center;
     mix-blend-mode: screen;
-}
-
-.carousel__content div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 25px;
-}
-
-.carousel__content img {
-    cursor: pointer;
-}
-
-.btn__arrow:hover {
-    transform: scale(0.85, 0.85);
-    transition: 0.35s;
 }
 
 .carousel__title {
@@ -229,6 +209,7 @@ header {
     color: #fff;
     font-size: x-large;
     margin: 25px 40px;
+    text-align: center;
 }
 
 .carousel__link {
@@ -237,8 +218,8 @@ header {
     background: none;
     padding: 10px 20px;
     border: #fff solid 2px;
-    border-radius: 10px;
     margin-top: 10px;
+    border-radius: 10px;
     mix-blend-mode: screen;
     background-color: white;
     color: black;
@@ -253,9 +234,16 @@ header {
     font-weight: 400 !important;
 }
 
+.btn__arrow {
+    transition-duration: 0.25s;
+}
+
+.btn__arrow:hover {
+    transform: scale(0.85, 0.85);
+}
+
 header .div__instrument {
     height: calc(100vh - 190px);
-    margin-top: 0%;
 }
 
 /*Main*/
@@ -325,6 +313,12 @@ h3 {
     box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.40);
     -webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.40);
     -moz-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.40);
+    transition-duration: 0.25s;
+}
+
+.card__button:hover {
+    background-color: #080f5c;
+    border: #080f5c 2px solid;
 }
 
 .div__instrument {
@@ -459,16 +453,8 @@ h3 {
     padding: 5px;
 }
 
-.div__instrument--alt {
-    margin-top: 0%;
-}
-
 .title {
     margin-bottom: 20px;
-}
-
-.div__paragraph {
-    padding: 20px 150px;
 }
 
 h4 {
@@ -506,18 +492,16 @@ h4 {
 
 /*Footer*/
 
-footer {
+footer .container-fluid {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 50px;
     margin: 0%;
     background: #fff;
     grid-area: footer;
 }
 
 footer p {
-    margin: 0%;
     font-size: large;
     font-weight: 500;
 }
@@ -535,17 +519,51 @@ footer nav ul li {
     margin-top: 4px;
 }
 
-@media (min-width: 577px) and (max-width: 992px) {
-    .nav__menu ul {
-        display: none;
+footer nav ul li:last-child {
+    margin-right: 20px;
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+    .nav__logo {
+        margin-left: 0px;
+    }
+
+    .navbar {
+        height: auto;
+        padding: 10px;
+    }
+
+    h1 {
+        margin-left: 5px;
+        padding: 10px 0px;
+    }
+
+    .navbar ul {
+        padding-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-right: 5px;
+    }
+
+    .navbar ul li {
+        padding: 15px 0px;
+    }
+
+    .navbar-toggler {
+        padding-right: 0px;
     }
 
     footer {
         padding: 0px 10px 0px;
     }
 
-    .nav__menu {
-        padding: 0px 10px;
+    footer nav ul {
+        padding: 0%;
+    }
+
+    footer nav ul li:last-child {
+        margin-right: 0px;
     }
 
     h1 {
@@ -581,38 +599,47 @@ footer nav ul li {
 }
 
 @media (max-width: 768px) {
-    footer {
+    footer .container-fluid {
         flex-direction: column-reverse;
         text-align: center;
         padding: 0px 10px 5px;
     }
 
-    footer p {
-        margin-bottom: 10px;
+    footer .container-fluid nav ul {
+        padding: 0%;
     }
 
-    footer nav ul li {
+    footer .container-fluid nav ul li {
         margin: 4px 15px 0px;
     }
 }
 
 @media (max-width: 576px) {
-    .nav__menu {
-        padding: 0px 10px;
+    .navbar {
+        height: auto;
+        padding: 10px 0px;
+    }
+
+    .nav__logo {
+        margin-left: 5px;
+    }
+
+    .navbar ul {
+        padding-top: 10px;
+    }
+
+    .navbar ul li {
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 
     h1 {
-        padding-left: 5px;
+        padding-left: 0px;
     }
 
-    .nav__menu ul {
-        display: none;
-    }
-
-    .menu--mobile {
-        display: block;
-        width: 45px;
-        height: 45px;
+    .navbar-toggler {
+        padding-right: 0px;
     }
 
     .carousel__title {
@@ -698,17 +725,17 @@ footer nav ul li {
         display: none;
     }
 
-    footer {
+    footer .container-fluid {
         flex-direction: column-reverse;
         text-align: center;
         padding: 0px 10px 5px;
     }
 
-    footer p {
+    footer .container-fluid p {
         font-size: x-large;
     }
 
-    footer nav ul li {
+    footer .container-fluid nav ul li {
         margin: 4px 15px 0px;
     }
 }

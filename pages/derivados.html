@@ -6,32 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invertir en Argentina - Derivados</title>
-    <link rel="stylesheet" href="../assets/styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/styles/styles.css">
 </head>
 
 <body>
-    <nav class="nav__menu">
-        <a href="../index.html" class="nav__logo">
-            <h1>Invertir en Argentina</h1>
-        </a>
+    <nav class="navbar navbar-expand-lg sticky-top px-3">
+        <div class="container-fluid">
+            <a href="../index.html" class="nav__logo">
+                <svg xmlns="http://www.w3.org/2000/svg" class="logo__icon" enable-background="new 0 0 24 24"
+                    height="30px" viewBox="0 0 24 24" width="30px" fill="#fff">
+                    <rect fill="none" height="24" width="24" />
+                    <g>
+                        <path id="svg1" d="M7.5,21H2V9h5.5V21z" />
+                        <path id="svg2" d="M14.75,3h-5.5v18h5.5V3z" />
+                        <path id="svg3" d="M22,11h-5.5v10H22V11z" />
+                    </g>
+                </svg>
+                <h1 class="ms-2">Invertir en Argentina</h1>
+            </a>
 
-        <ul>
-            <li><a class="nav__link" href="./variable.html">Renta Variable</a></li>
-            <li><a class="nav__link" href="./fija.html">Renta Fija</a></li>
-            <li><a class="nav__link" href="./fci.html">FCI y ETF</a></li>
-            <li><a class="nav__link link--actual" href="./derivados.html">Derivados</a></li>
-        </ul>
-        
-        <div class="menu--mobile">
-            <img src="../assets/icons/menu.svg" alt="Menu Icon">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="../assets/icons/menu.svg" alt="Menu Icon">
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-md-auto gap-2">
+                    <li><a class="nav__link" href="./variable.html">Renta Variable</a></li>
+                    <li><a class="nav__link" href="./fija.html">Renta Fija</a></li>
+                    <li><a class="nav__link" href="./fci.html">FCI y ETF</a></li>
+                    <li><a class="nav__link link--actual" href="./derivados.html">Derivados</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <header>
-        <div class="div__instrument">
+        <div class="div__instrument mt-0">
             <div class="bg__options">
             </div>
 
@@ -47,67 +63,85 @@
     </header>
 
     <main>
-        <h3 class="title">Derivados</h3>
+        <div class="container pt-2 p-5">
+            <h3 class="title">Derivados</h3>
 
-        <div class="div__paragraph">
-            <h4>Opciones:</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias eius dolorem illo odio aliquam quod
-                commodi quam excepturi, aperiam voluptatem eaque consequuntur nihil dicta aspernatur consequatur vel
-                dolor ratione amet.
-                Veniam facere commodi possimus quo accusamus dolorum magnam molestiae debitis perferendis non? Explicabo
-                minus expedita modi mollitia eveniet quaerat ut sit animi qui quasi? Optio officiis distinctio mollitia
-                assumenda labore.
-                Ab, voluptatum dicta! Totam, ipsum perferendis! Delectus, officiis expedita odit praesentium sequi animi
-                dolores maxime modi, assumenda dolor repellat commodi ipsa iure magnam. Repellendus quidem, voluptas ab
-                harum ratione repudiandae.
-                Consequuntur, temporibus culpa! Amet, beatae rerum voluptate provident porro officiis cupiditate modi.
-                Modi ducimus hic, inventore commodi placeat corrupti fuga ut id eaque, optio minima ea earum sint? A,
-                nostrum.</p>
+            <div class="div__paragraph">
+                <h4>Opciones:</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias eius dolorem illo odio aliquam
+                    quod
+                    commodi quam excepturi, aperiam voluptatem eaque consequuntur nihil dicta aspernatur consequatur vel
+                    dolor ratione amet.
+                    Veniam facere commodi possimus quo accusamus dolorum magnam molestiae debitis perferendis non?
+                    Explicabo
+                    minus expedita modi mollitia eveniet quaerat ut sit animi qui quasi? Optio officiis distinctio
+                    mollitia
+                    assumenda labore.
+                    Ab, voluptatum dicta! Totam, ipsum perferendis! Delectus, officiis expedita odit praesentium sequi
+                    animi
+                    dolores maxime modi, assumenda dolor repellat commodi ipsa iure magnam. Repellendus quidem, voluptas
+                    ab
+                    harum ratione repudiandae.
+                    Consequuntur, temporibus culpa! Amet, beatae rerum voluptate provident porro officiis cupiditate
+                    modi.
+                    Modi ducimus hic, inventore commodi placeat corrupti fuga ut id eaque, optio minima ea earum sint?
+                    A,
+                    nostrum.</p>
+            </div>
+
+            <div class="div__paragraph">
+                <h4>Futuros:</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, laborum repellendus. Cumque totam
+                    ipsa
+                    laborum quis delectus minus dolor aut, nobis vero perferendis recusandae ratione expedita et
+                    voluptatum
+                    facere debitis.
+                    Amet aspernatur quas impedit cumque ea sunt assumenda voluptatum adipisci atque libero aliquam error
+                    minus est veritatis iste doloremque explicabo eum et quisquam sequi quidem, dignissimos non. Unde,
+                    nisi
+                    perferendis.
+                    Iste tenetur voluptatem, molestias in iusto placeat, harum fugiat veniam facere sunt exercitationem
+                    cupiditate obcaecati cum. Tempore nostrum commodi beatae dolore temporibus deleniti corporis ipsa
+                    inventore quia quasi, similique ullam?
+                    Neque nostrum similique laborum asperiores amet minima veritatis reprehenderit in ducimus, aut vel
+                    cumque, rerum et, laboriosam animi. Aliquid, aperiam! Deserunt illum pariatur dolores adipisci
+                    inventore
+                    tenetur assumenda non doloremque.</p>
+            </div>
         </div>
-
-        <div class="div__paragraph">
-            <h4>Futuros:</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, laborum repellendus. Cumque totam ipsa
-                laborum quis delectus minus dolor aut, nobis vero perferendis recusandae ratione expedita et voluptatum
-                facere debitis.
-                Amet aspernatur quas impedit cumque ea sunt assumenda voluptatum adipisci atque libero aliquam error
-                minus est veritatis iste doloremque explicabo eum et quisquam sequi quidem, dignissimos non. Unde, nisi
-                perferendis.
-                Iste tenetur voluptatem, molestias in iusto placeat, harum fugiat veniam facere sunt exercitationem
-                cupiditate obcaecati cum. Tempore nostrum commodi beatae dolore temporibus deleniti corporis ipsa
-                inventore quia quasi, similique ullam?
-                Neque nostrum similique laborum asperiores amet minima veritatis reprehenderit in ducimus, aut vel
-                cumque, rerum et, laboriosam animi. Aliquid, aperiam! Deserunt illum pariatur dolores adipisci inventore
-                tenetur assumenda non doloremque.</p>
-        </div>
-
         <a href="#" class="btn__top">
             <img src="../assets/icons/top-arrow.svg" alt="Volver arriba">
         </a>
     </main>
 
-    <footer>
-        <p>© Invertir en Argentina - Todos los derechos reservados.</p>
-        <nav>
-            <ul>
-                <li>
-                    <a href="https://twitter.com/EmanuelTivano">
-                        <img src="../assets/icons/twitter.svg" target="_blank" alt="Twitter">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/emanueltivano">
-                        <img src="../assets/icons/github.svg" target="_blank" alt="GitHub">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/emanuel-tivano/">
-                        <img src="../assets/icons/linkedin.svg" target="_blank" alt="LinkedIn">
-                    </a>
-                </li>
-            </ul>
-        </nav>
+    <footer class="px-3">
+        <div class="container-fluid">
+            <p class="my-2 m-0">© Invertir en Argentina - Todos los derechos reservados.</p>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="https://twitter.com/EmanuelTivano">
+                            <img src="../assets/icons/twitter.svg" target="_blank" alt="Twitter">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/emanueltivano">
+                            <img src="../assets/icons/github.svg" target="_blank" alt="GitHub">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/emanuel-tivano/">
+                            <img src="../assets/icons/linkedin.svg" target="_blank" alt="LinkedIn">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

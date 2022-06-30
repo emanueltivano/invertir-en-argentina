@@ -6,87 +6,136 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invertir en Argentina</title>
-    <link rel="stylesheet" href="./assets/styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
 </head>
 
 <body>
-    <nav class="nav__menu">
-        <a href="index.html" class="nav__logo">
-            <svg xmlns="http://www.w3.org/2000/svg" class="logo__icon" enable-background="new 0 0 24 24" height="30px" viewBox="0 0 24 24"
-                width="30px" fill="#fff">
-                <rect fill="none" height="24" width="24" />
-                <g>
-                    <path id="svg1" d="M7.5,21H2V9h5.5V21z" />
-                    <path id="svg2" d="M14.75,3h-5.5v18h5.5V3z" />
-                    <path id="svg3" d="M22,11h-5.5v10H22V11z" />
-                </g>
-            </svg>
-            <h1>Invertir en Argentina</h1>
-        </a>
+    <nav class="navbar navbar-expand-lg sticky-top px-3">
+        <div class="container-fluid">
+            <a href="index.html" class="nav__logo">
+                <svg xmlns="http://www.w3.org/2000/svg" class="logo__icon" enable-background="new 0 0 24 24"
+                    height="30px" viewBox="0 0 24 24" width="30px" fill="#fff">
+                    <rect fill="none" height="24" width="24" />
+                    <g>
+                        <path id="svg1" d="M7.5,21H2V9h5.5V21z" />
+                        <path id="svg2" d="M14.75,3h-5.5v18h5.5V3z" />
+                        <path id="svg3" d="M22,11h-5.5v10H22V11z" />
+                    </g>
+                </svg>
+                <h1 class="ms-2">Invertir en Argentina</h1>
+            </a>
 
-        <ul>
-            <li><a class="nav__link" href="./pages/variable.html">Renta Variable</a></li>
-            <li><a class="nav__link" href="./pages/fija.html">Renta Fija</a></li>
-            <li><a class="nav__link" href="./pages/fci.html">FCI y ETF</a></li>
-            <li><a class="nav__link" href="./pages/derivados.html">Derivados</a></li>
-        </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="./assets/icons/menu.svg" alt="Menu Icon">
+            </button>
 
-        <div class="menu--mobile">
-            <img src="./assets/icons/menu.svg" alt="Menu Icon">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-md-auto gap-2">
+                    <li><a class="nav__link" href="./pages/variable.html">Renta Variable</a></li>
+                    <li><a class="nav__link" href="./pages/fija.html">Renta Fija</a></li>
+                    <li><a class="nav__link" href="./pages/fci.html">FCI y ETF</a></li>
+                    <li><a class="nav__link" href="./pages/derivados.html">Derivados</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <header>
-        <div class="carousel">
-        </div>
+        <div class="carousel--bg"></div>
 
-        <div class="carousel__content">
-            <img src="./assets/icons/before-arrow.svg" class="btn__arrow" alt="Diapositiva anterior.">
-
-            <div>
-                <h2 class="carousel__title">Primeros pasos para invertir</h2>
-                <p class="carousel__text">Aprende sobre como iniciar en el mundo de las inversiones.</p>
-                <button class="carousel__link">Ver más</button>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
             </div>
 
-            <img src="./assets/icons/next-arrow.svg" class="btn__arrow" alt="Diapositiva siguiente.">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-md-block">
+                        <h2 class="carousel__title">Primeros pasos</h2>
+                        <p class="carousel__text">Aprende sobre como iniciar en el mundo de las inversiones.</p>
+                        <div class="d-flex justify-content-center">
+                            <button class="carousel__link">Ver más</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-md-block">
+                        <h2 class="carousel__title">Agentes del mercado</h2>
+                        <p class="carousel__text">Aprende sobre los agentes que intervienen en el mercado.</p>
+                        <div class="d-flex justify-content-center">
+                            <button class="carousel__link">Ver más</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-md-block">
+                        <h2 class="carousel__title">Impuestos y Legales</h2>
+                        <p class="carousel__text">Aprende sobre cuestiones impositivas y legales del mercado.</p>
+                        <div class="d-flex justify-content-center">
+                            <button class="carousel__link">Ver más</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <img src="./assets/icons/before-arrow.svg" class="btn__arrow" alt="Diapositiva anterior.">
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <img src="./assets/icons/next-arrow.svg" class="btn__arrow" alt="Diapositiva siguiente.">
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </header>
 
     <main>
-        <h3>Instrumentos de inversión</h3>
+        <div class="container pt-2">
+            <h3 class="title">Instrumentos de inversión</h3>
 
-        <div class="div__cards">
-            <div class="card">
-                <img src="./assets/images/acciones.jpg" alt="Imagen Acciones">
-                <p class="card__title">Renta Variable</p>
-                <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dignissimos!</p>
-                <a href="./pages/variable.html" class="card__button">Aprender más</a>
-            </div>
-            <div class="card">
-                <img src="./assets/images/bonos.jpg" alt="Imagen Bonos">
-                <p class="card__title">Renta Fija</p>
-                <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dignissimos!</p>
-                <a href="./pages/fija.html" class="card__button">Aprender más</a>
-            </div>
-            <div class="card">
-                <img src="./assets/images/fci.jpg" alt="Imagen FCI">
-                <p class="card__title">FCI's y ETF's</p>
-                <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dignissimos!</p>
-                <a href="./pages/fci.html" class="card__button">Aprender más</a>
-            </div>
-            <div class="card">
-                <img src="./assets/images/derivados.jpg" alt="Imagen Derivadas">
-                <p class="card__title">Derivados</p>
-                <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dignissimos!</p>
-                <a href="./pages/derivados.html" class="card__button">Aprender más</a>
+            <div class="div__cards">
+                <div class="card">
+                    <img src="./assets/images/acciones.jpg" alt="Imagen Acciones">
+                    <p class="card__title">Renta Variable</p>
+                    <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dignissimos!</p>
+                    <a href="./pages/variable.html" class="card__button">Aprender más</a>
+                </div>
+                <div class="card">
+                    <img src="./assets/images/bonos.jpg" alt="Imagen Bonos">
+                    <p class="card__title">Renta Fija</p>
+                    <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dignissimos!</p>
+                    <a href="./pages/fija.html" class="card__button">Aprender más</a>
+                </div>
+                <div class="card">
+                    <img src="./assets/images/fci.jpg" alt="Imagen FCI">
+                    <p class="card__title">FCI's y ETF's</p>
+                    <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dignissimos!</p>
+                    <a href="./pages/fci.html" class="card__button">Aprender más</a>
+                </div>
+                <div class="card">
+                    <img src="./assets/images/derivados.jpg" alt="Imagen Derivadas">
+                    <p class="card__title">Derivados</p>
+                    <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dignissimos!</p>
+                    <a href="./pages/derivados.html" class="card__button">Aprender más</a>
+                </div>
             </div>
         </div>
 
-        <div class="div__instrument">
+        <div class="container-fluid px-0 div__instrument">
             <div class="bg__stocks">
             </div>
 
@@ -130,7 +179,7 @@
             <img src="./assets/icons/next-arrow-alt.svg" class="btn__arrow" alt="Siguiente">
         </div>
 
-        <div class="div__instrument">
+        <div class="container-fluid px-0 div__instrument">
             <div class="bg__bonds">
             </div>
 
@@ -189,7 +238,7 @@
             </div>
         </div>
 
-        <div class="div__instrument div__instrument--alt">
+        <div class="container-fluid px-0 mt-0 div__instrument">
             <div class="bg__options">
             </div>
 
@@ -205,28 +254,34 @@
         </div>
     </main>
 
-    <footer>
-        <p>© Invertir en Argentina - Todos los derechos reservados.</p>
-        <nav>
-            <ul>
-                <li>
-                    <a href="https://twitter.com/EmanuelTivano">
-                        <img src="./assets/icons/twitter.svg" target="_blank" alt="Twitter">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/emanueltivano">
-                        <img src="./assets/icons/github.svg" target="_blank" alt="GitHub">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/emanuel-tivano/">
-                        <img src="./assets/icons/linkedin.svg" target="_blank" alt="LinkedIn">
-                    </a>
-                </li>
-            </ul>
-        </nav>
+    <footer class="px-3">
+        <div class="container-fluid">
+            <p class="my-2 my-md-0">© Invertir en Argentina - Todos los derechos reservados.</p>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="https://twitter.com/EmanuelTivano">
+                            <img src="./assets/icons/twitter.svg" target="_blank" alt="Twitter">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/emanueltivano">
+                            <img src="./assets/icons/github.svg" target="_blank" alt="GitHub">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/emanuel-tivano/">
+                            <img src="./assets/icons/linkedin.svg" target="_blank" alt="LinkedIn">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

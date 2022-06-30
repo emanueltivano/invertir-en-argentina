@@ -6,32 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invertir en Argentina - FCI y ETF</title>
-    <link rel="stylesheet" href="../assets/styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/styles/styles.css">
 </head>
 
 <body>
-    <nav class="nav__menu">
-        <a href="../index.html" class="nav__logo">
-            <h1>Invertir en Argentina</h1>
-        </a>
+    <nav class="navbar navbar-expand-lg sticky-top px-3">
+        <div class="container-fluid">
+            <a href="../index.html" class="nav__logo">
+                <svg xmlns="http://www.w3.org/2000/svg" class="logo__icon" enable-background="new 0 0 24 24"
+                    height="30px" viewBox="0 0 24 24" width="30px" fill="#fff">
+                    <rect fill="none" height="24" width="24" />
+                    <g>
+                        <path id="svg1" d="M7.5,21H2V9h5.5V21z" />
+                        <path id="svg2" d="M14.75,3h-5.5v18h5.5V3z" />
+                        <path id="svg3" d="M22,11h-5.5v10H22V11z" />
+                    </g>
+                </svg>
+                <h1 class="ms-2">Invertir en Argentina</h1>
+            </a>
 
-        <ul>
-            <li><a class="nav__link" href="./variable.html">Renta Variable</a></li>
-            <li><a class="nav__link" href="./fija.html">Renta Fija</a></li>
-            <li><a class="nav__link link--actual" href="./fci.html">FCI y ETF</a></li>
-            <li><a class="nav__link" href="./derivados.html">Derivados</a></li>
-        </ul>
-        
-        <div class="menu--mobile">
-            <img src="../assets/icons/menu.svg" alt="Menu Icon">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="../assets/icons/menu.svg" alt="Menu Icon">
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-md-auto gap-2">
+                    <li><a class="nav__link" href="./variable.html">Renta Variable</a></li>
+                    <li><a class="nav__link" href="./fija.html">Renta Fija</a></li>
+                    <li><a class="nav__link link--actual" href="./fci.html">FCI y ETF</a></li>
+                    <li><a class="nav__link" href="./derivados.html">Derivados</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <header>
-        <div class="div__instrument">
+        <div class="div__instrument mt-0">
             <div class="bg__etf">
             </div>
 
@@ -47,37 +63,49 @@
     </header>
 
     <main>
-        <h3 class="title">FCI y ETF</h3>
+        <div class="container pt-2 p-5">
+            <h3 class="title">FCI y ETF</h3>
 
-        <div class="div__paragraph">
-            <h4>Fondo Comun de Inversión (FCI):</h4>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore voluptas labore temporibus quisquam
-                ut, tenetur natus alias ducimus dolores quae voluptatibus recusandae laudantium pariatur atque! Ex quas
-                delectus mollitia amet.
-                Quo fugit inventore provident dolor blanditiis praesentium tenetur dolores vero quos voluptate iste
-                exercitationem soluta modi itaque velit voluptas facere ipsum minima molestiae a, ipsa esse cumque ipsam
-                distinctio. Quia.
-                Atque velit quos incidunt nesciunt, voluptates sunt, ratione veniam unde officiis commodi sint quidem
-                ipsum ducimus? Voluptatum, magni cum est quasi sed, modi doloremque asperiores non eaque reprehenderit
-                rem laborum.
-                Voluptatum vitae corporis id quo minima assumenda optio autem! Ipsa architecto saepe numquam! Voluptate
-                enim odio, a vero est maxime natus quibusdam distinctio dolorem adipisci minus deserunt rem esse
-                officia.</p>
-        </div>
+            <div class="div__paragraph">
+                <h4>Fondo Comun de Inversión (FCI):</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore voluptas labore temporibus
+                    quisquam
+                    ut, tenetur natus alias ducimus dolores quae voluptatibus recusandae laudantium pariatur atque! Ex
+                    quas
+                    delectus mollitia amet.
+                    Quo fugit inventore provident dolor blanditiis praesentium tenetur dolores vero quos voluptate iste
+                    exercitationem soluta modi itaque velit voluptas facere ipsum minima molestiae a, ipsa esse cumque
+                    ipsam
+                    distinctio. Quia.
+                    Atque velit quos incidunt nesciunt, voluptates sunt, ratione veniam unde officiis commodi sint
+                    quidem
+                    ipsum ducimus? Voluptatum, magni cum est quasi sed, modi doloremque asperiores non eaque
+                    reprehenderit
+                    rem laborum.
+                    Voluptatum vitae corporis id quo minima assumenda optio autem! Ipsa architecto saepe numquam!
+                    Voluptate
+                    enim odio, a vero est maxime natus quibusdam distinctio dolorem adipisci minus deserunt rem esse
+                    officia.</p>
+            </div>
 
-        <div class="div__paragraph">
-            <h4>Exchange Traded Fund (ETF):</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos sunt aliquam, fuga ab aperiam optio
-                ut id, reprehenderit ipsam ducimus ea iure atque hic? Voluptatem illo optio cupiditate tempora! Dolorum?
-                Nam facere exercitationem optio perspiciatis architecto quaerat praesentium, saepe eos quasi sint ullam
-                beatae obcaecati ducimus. Esse, totam laudantium voluptates delectus placeat dolore aliquid? Eius
-                placeat vitae adipisci illo nulla?
-                Consequatur magni commodi iure ipsam consequuntur impedit tempore cupiditate ex non voluptas, quam,
-                ullam similique deleniti recusandae sunt nostrum sit quae aliquid. Doloremque at itaque tempora
-                blanditiis dolores magnam sequi?
-                Mollitia sed neque non aliquam quod, aut numquam voluptas cupiditate, incidunt reprehenderit
-                consequuntur earum repudiandae, ab porro vel nostrum optio quisquam nulla. Ab minus architecto facere
-                distinctio adipisci nulla odit.</p>
+            <div class="div__paragraph">
+                <h4>Exchange Traded Fund (ETF):</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos sunt aliquam, fuga ab aperiam
+                    optio
+                    ut id, reprehenderit ipsam ducimus ea iure atque hic? Voluptatem illo optio cupiditate tempora!
+                    Dolorum?
+                    Nam facere exercitationem optio perspiciatis architecto quaerat praesentium, saepe eos quasi sint
+                    ullam
+                    beatae obcaecati ducimus. Esse, totam laudantium voluptates delectus placeat dolore aliquid? Eius
+                    placeat vitae adipisci illo nulla?
+                    Consequatur magni commodi iure ipsam consequuntur impedit tempore cupiditate ex non voluptas, quam,
+                    ullam similique deleniti recusandae sunt nostrum sit quae aliquid. Doloremque at itaque tempora
+                    blanditiis dolores magnam sequi?
+                    Mollitia sed neque non aliquam quod, aut numquam voluptas cupiditate, incidunt reprehenderit
+                    consequuntur earum repudiandae, ab porro vel nostrum optio quisquam nulla. Ab minus architecto
+                    facere
+                    distinctio adipisci nulla odit.</p>
+            </div>
         </div>
 
         <a href="#" class="btn__top">
@@ -85,28 +113,34 @@
         </a>
     </main>
 
-    <footer>
-        <p>© Invertir en Argentina - Todos los derechos reservados.</p>
-        <nav>
-            <ul>
-                <li>
-                    <a href="https://twitter.com/EmanuelTivano">
-                        <img src="../assets/icons/twitter.svg" target="_blank" alt="Twitter">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/emanueltivano">
-                        <img src="../assets/icons/github.svg" target="_blank" alt="GitHub">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/emanuel-tivano/">
-                        <img src="../assets/icons/linkedin.svg" target="_blank" alt="LinkedIn">
-                    </a>
-                </li>
-            </ul>
-        </nav>
+    <footer class="px-3">
+        <div class="container-fluid">
+            <p class="my-2 m-0">© Invertir en Argentina - Todos los derechos reservados.</p>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="https://twitter.com/EmanuelTivano">
+                            <img src="../assets/icons/twitter.svg" target="_blank" alt="Twitter">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/emanueltivano">
+                            <img src="../assets/icons/github.svg" target="_blank" alt="GitHub">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/emanuel-tivano/">
+                            <img src="../assets/icons/linkedin.svg" target="_blank" alt="LinkedIn">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
