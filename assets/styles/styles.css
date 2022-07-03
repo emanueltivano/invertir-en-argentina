@@ -190,6 +190,25 @@ header {
     mix-blend-mode: screen;
 }
 
+.carousel-control-next,
+.carousel-control-prev {
+    opacity: 0.9;
+}
+
+.carousel-control-prev button,
+.carousel-control-next button {
+    background: none;
+    border: none;
+    opacity: 0.5;
+}
+
+.carousel-control-next button:focus,
+.carousel-control-next button:hover,
+.carousel-control-prev button:focus,
+.carousel-control-prev button:hover {
+    opacity: 0.9;
+}
+
 .carousel__title {
     color: #fff;
     font-size: 50px;
@@ -231,8 +250,9 @@ header {
     transition-duration: 0.25s;
 }
 
+.btn__arrow:focus,
 .btn__arrow:hover {
-    transform: scale(0.85, 0.85);
+    transform: scale(0.90, 0.90);
 }
 
 header .div__instrument {
@@ -242,22 +262,12 @@ header .div__instrument {
 /*Main*/
 
 main {
-    padding: 25px 0px 0px;
     grid-area: main;
 }
 
 h3 {
     text-align: center;
     font-size: xx-large;
-    margin: 15px 0px 0px;
-}
-
-.div__cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 850px;
-    margin: auto;
 }
 
 .card {
@@ -269,7 +279,7 @@ h3 {
     width: 350px;
     height: 350px;
     border-radius: 20px;
-    margin: 40px 20px 0px;
+    margin: 0px 20px;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.40);
     -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.40);
     -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.40);
@@ -288,9 +298,16 @@ h3 {
     margin: 15px 0px;
 }
 
-.card__text {
+.card .placeholder-wave {
+    width: 100%;
     margin: 0%;
-    padding: 0px 20px;
+    padding: 0px 15px;
+}
+
+.div__carousel .card .placeholder-wave {
+    width: 100%;
+    margin: 0%;
+    padding: 0px 15px 15px;
 }
 
 .card__button {
@@ -310,15 +327,14 @@ h3 {
 }
 
 .card__button:hover {
-    background-color: #080f5c;
-    border: #080f5c 2px solid;
+    background-color: #1016d8;
+    border: #1016d8 2px solid;
 }
 
 .div__instrument {
     position: relative;
     width: 100%;
     height: calc(100vh - 125px);
-    margin-top: 40px;
 }
 
 .bg__stocks,
@@ -414,8 +430,6 @@ h3 {
 }
 
 .div__title--alt {
-    margin-top: 80px;
-    margin-bottom: 0px;
     text-align: center;
     font-size: xx-large;
 }
@@ -424,7 +438,8 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 0px 125px 40px;
+    padding-left: 125px;
+    padding-right: 125px;
 }
 
 .div__carousel img {
@@ -452,7 +467,6 @@ h3 {
 
 h4 {
     font-size: larger;
-    margin-bottom: 10px;
 }
 
 .div__paragraph p {
@@ -576,10 +590,6 @@ footer nav ul li:last-child {
         width: 100%;
     }
 
-    .div__carousel img {
-        margin-top: 50px;
-    }
-
     .card--alt {
         display: none;
     }
@@ -587,7 +597,6 @@ footer nav ul li:last-child {
     .principal {
         display: flex;
         height: auto;
-        margin-top: 50px;
     }
 }
 
@@ -614,7 +623,7 @@ footer nav ul li:last-child {
     }
 
     .nav__logo {
-        margin-left: 5px;
+        margin-left: 0px;
     }
 
     .navbar ul {
@@ -654,6 +663,7 @@ footer nav ul li:last-child {
         flex-direction: column;
         width: 100%;
         align-items: center;
+        justify-content: center;
     }
 
     .card {
@@ -666,10 +676,6 @@ footer nav ul li:last-child {
 
     .card__title {
         font-size: 30px;
-    }
-
-    .card__text {
-        font-size: 20px;
     }
 
     .card__button {
@@ -690,8 +696,6 @@ footer nav ul li:last-child {
 
     .principal {
         display: flex;
-        height: 300px;
-        margin-top: 25px;
     }
 
     .div__paragraph {
@@ -703,7 +707,6 @@ footer nav ul li:last-child {
     h3 {
         font-size: 35px;
         width: 90%;
-        margin: 15px auto 20px;
     }
 
     h4 {

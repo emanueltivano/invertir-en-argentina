@@ -100,53 +100,75 @@
                 </div>
             </div>
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev">
-                <img src="./assets/icons/before-arrow.svg" class="btn__arrow" alt="Diapositiva anterior.">
-                <span class="visually-hidden">Previous</span>
-            </button>
+            <div class="carousel-control-prev d-flex align-items-center">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <img src="./assets/icons/before-arrow.svg" class="btn__arrow" alt="Diapositiva anterior.">
+                    <span class="visually-hidden">Previous</span>
+                </button>
+            </div>
 
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next">
-                <img src="./assets/icons/next-arrow.svg" class="btn__arrow" alt="Diapositiva siguiente.">
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div class="carousel-control-next d-flex align-items-center">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <img src="./assets/icons/next-arrow.svg" class="btn__arrow" alt="Diapositiva siguiente.">
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
     </header>
 
     <main>
-        <div class="container pt-2">
-            <h3 class="title">Instrumentos de inversión</h3>
+        <div class="container">
+            <h3 class="title my-5">Instrumentos de inversión</h3>
 
-            <div class="div__cards">
+            <div class="div__cards d-flex flex-wrap justify-content-around px-5 gap-5">
                 <div class="card">
                     <img src="./assets/images/acciones.jpg" alt="Imagen Acciones">
                     <p class="card__title">Renta Variable</p>
-                    <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dignissimos!</p>
+                    <p class="placeholder-wave">
+                      <span class="placeholder col-8 mx-1 mb-2 placeholder-lg"></span>
+                      <span class="placeholder col-3 mb-2 placeholder-lg"></span>
+                      <span class="placeholder col-4 mx-1 placeholder-lg"></span>
+                      <span class="placeholder col-7 placeholder-lg"></span>
+                    </p>
                     <a href="./pages/variable.html" class="card__button">Aprender más</a>
                 </div>
                 <div class="card">
                     <img src="./assets/images/bonos.jpg" alt="Imagen Bonos">
                     <p class="card__title">Renta Fija</p>
-                    <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dignissimos!</p>
+                    <p class="placeholder-wave">
+                      <span class="placeholder col-6 mx-1 mb-2 placeholder-lg"></span>
+                      <span class="placeholder col-5 mb-2 placeholder-lg"></span>
+                      <span class="placeholder col-4 mx-1 placeholder-lg"></span>
+                      <span class="placeholder col-7 placeholder-lg"></span>
+                    </p>
                     <a href="./pages/fija.html" class="card__button">Aprender más</a>
                 </div>
                 <div class="card">
                     <img src="./assets/images/fci.jpg" alt="Imagen FCI">
                     <p class="card__title">FCI's y ETF's</p>
-                    <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dignissimos!</p>
+                    <p class="placeholder-wave">
+                      <span class="placeholder col-3 mx-1 mb-2 placeholder-lg"></span>
+                      <span class="placeholder col-8 mb-2 placeholder-lg"></span>
+                      <span class="placeholder col-7 mx-1 placeholder-lg"></span>
+                      <span class="placeholder col-4 placeholder-lg"></span>
+                    </p>
                     <a href="./pages/fci.html" class="card__button">Aprender más</a>
                 </div>
                 <div class="card">
                     <img src="./assets/images/derivados.jpg" alt="Imagen Derivadas">
                     <p class="card__title">Derivados</p>
-                    <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dignissimos!</p>
+                    <p class="placeholder-wave">
+                      <span class="placeholder col-9 mx-1 mb-2 placeholder-lg"></span>
+                      <span class="placeholder col-2 mb-2 placeholder-lg"></span>
+                      <span class="placeholder col-5 mx-1 placeholder-lg"></span>
+                      <span class="placeholder col-6 placeholder-lg"></span>
+                    </p>
                     <a href="./pages/derivados.html" class="card__button">Aprender más</a>
                 </div>
             </div>
         </div>
 
-        <div class="container-fluid px-0 div__instrument">
+        <div class="container-fluid px-0 div__instrument mt-5">
             <div class="bg__stocks">
             </div>
 
@@ -161,28 +183,46 @@
             </div>
         </div>
 
-        <h4 class="div__title--alt">Instrumentos de Renta Variable</h4>
+        <h4 class="div__title--alt my-5">Instrumentos de Renta Variable</h4>
 
         <div class="div__carousel">
             <img src="./assets/icons/before-arrow-alt.svg" class="btn__arrow" alt="Anterior">
 
             <div class="card card--alt principal">
                 <p class="card__title">Acciones</p>
-                <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, tempora?
+                <p class="placeholder-wave">
+                  <span class="placeholder col-7 mx-1 mb-2"></span>
+                  <span class="placeholder col-4 mb-2"></span>
+                  <span class="placeholder col-4 mx-1 mb-2"></span>
+                  <span class="placeholder col-7 mb-2"></span>
+                  <span class="placeholder col-8 mx-1"></span>
+                  <span class="placeholder col-3"></span>
                 </p>
                 <button class="card__button">Aprender más</button>
             </div>
 
             <div class="card card--alt">
                 <p class="card__title">CEDEAR's</p>
-                <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, tempora?
+                <p class="placeholder-wave">
+                  <span class="placeholder col-6 mx-1 mb-2"></span>
+                  <span class="placeholder col-5 mb-2"></span>
+                  <span class="placeholder col-3 mx-1 mb-2"></span>
+                  <span class="placeholder col-8 mb-2"></span>
+                  <span class="placeholder col-5 mx-1"></span>
+                  <span class="placeholder col-6"></span>
                 </p>
                 <button class="card__button">Aprender más</button>
             </div>
 
             <div class="card card--alt">
                 <p class="card__title">ADR's</p>
-                <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, tempora?
+                <p class="placeholder-wave">
+                  <span class="placeholder col-8 mx-1 mb-2"></span>
+                  <span class="placeholder col-3 mb-2"></span>
+                  <span class="placeholder col-4 mx-1 mb-2"></span>
+                  <span class="placeholder col-7 mb-2"></span>
+                  <span class="placeholder col-6 mx-1"></span>
+                  <span class="placeholder col-5"></span>
                 </p>
                 <button class="card__button">Aprender más</button>
             </div>
@@ -190,7 +230,7 @@
             <img src="./assets/icons/next-arrow-alt.svg" class="btn__arrow" alt="Siguiente">
         </div>
 
-        <div class="container-fluid px-0 div__instrument">
+        <div class="container-fluid px-0 div__instrument mt-5">
             <div class="bg__bonds">
             </div>
 
@@ -205,28 +245,46 @@
             </div>
         </div>
 
-        <h4 class="div__title--alt">Instrumentos de Renta Fija</h4>
+        <h4 class="div__title--alt my-5">Instrumentos de Renta Fija</h4>
 
         <div class="div__carousel">
             <img src="./assets/icons/before-arrow-alt.svg" class="btn__arrow" alt="Anterior">
 
             <div class="card card--alt principal">
                 <p class="card__title">Bonos</p>
-                <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, tempora?
+                <p class="placeholder-wave">
+                  <span class="placeholder col-7 mx-1 mb-2"></span>
+                  <span class="placeholder col-4 mb-2"></span>
+                  <span class="placeholder col-4 mx-1 mb-2"></span>
+                  <span class="placeholder col-7 mb-2"></span>
+                  <span class="placeholder col-8 mx-1"></span>
+                  <span class="placeholder col-3"></span>
                 </p>
                 <button class="card__button">Aprender más</button>
             </div>
 
             <div class="card card--alt">
                 <p class="card__title">Letras</p>
-                <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, tempora?
+                <p class="placeholder-wave">
+                  <span class="placeholder col-6 mx-1 mb-2"></span>
+                  <span class="placeholder col-5 mb-2"></span>
+                  <span class="placeholder col-3 mx-1 mb-2"></span>
+                  <span class="placeholder col-8 mb-2"></span>
+                  <span class="placeholder col-5 mx-1"></span>
+                  <span class="placeholder col-6"></span>
                 </p>
                 <button class="card__button">Aprender más</button>
             </div>
 
             <div class="card card--alt">
                 <p class="card__title">Cauciones</p>
-                <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, tempora?
+                <p class="placeholder-wave">
+                  <span class="placeholder col-8 mx-1 mb-2"></span>
+                  <span class="placeholder col-3 mb-2"></span>
+                  <span class="placeholder col-4 mx-1 mb-2"></span>
+                  <span class="placeholder col-7 mb-2"></span>
+                  <span class="placeholder col-6 mx-1"></span>
+                  <span class="placeholder col-5"></span>
                 </p>
                 <button class="card__button">Aprender más</button>
             </div>
@@ -234,7 +292,7 @@
             <img src="./assets/icons/next-arrow-alt.svg" class="btn__arrow" alt="Siguiente">
         </div>
 
-        <div class="div__instrument">
+        <div class="div__instrument mt-5">
             <div class="bg__etf">
             </div>
 
