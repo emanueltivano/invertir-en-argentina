@@ -1,0 +1,43 @@
+/*Animaciones*/
+
+@keyframes svgAnimation1 {
+    0% {
+        d: path('M7.5,21H2V9h5.5V21z')
+    }
+
+    50% {
+        d: path('M7.5,21H2V7h5.5V21z')
+    }
+
+    100% {
+        d: path('M7.5,21H2V9h5.5V21z')
+    }
+}
+
+@keyframes svgAnimation2 {
+    0% {
+        d: path('M14.75,3h-5.5v18h5.5V3z')
+    }
+
+    50% {
+        d: path('M14.75,11h-5.5v10h5.5V6z')
+    }
+
+    100% {
+        d: path('M14.75,3h-5.5v18h5.5V3z')
+    }
+}
+
+@keyframes svgAnimation3 {
+    0% {
+        d: path('M22,11h-5.5v10H22V11z')
+    }
+
+    50% {
+        d: path('M22,3h-5.5v18H22V9z')
+    }
+
+    100% {
+        d: path('M22,11h-5.5v10H22V11z')
+    }
+}

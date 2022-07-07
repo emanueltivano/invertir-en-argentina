@@ -1,0 +1,254 @@
+@import 'variables';
+@import 'animations';
+@import 'nav';
+@import 'header';
+@import 'main';
+@import 'footer';
+
+/*General*/
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: normal;
+}
+
+body {
+    background: #eee;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "navbar"
+        "header"
+        "main"
+        "footer";
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        color: #fff;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+    .nav__logo {
+        margin-left: 0px;
+    }
+
+    .navbar {
+        height: auto;
+        padding: 10px; 
+        ul {
+            padding-top: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-right: 5px; 
+            li {
+                padding: 15px 0px;
+            }
+        }
+    }
+
+    h1 {
+        margin-left: 5px;
+        padding: 10px 0px;
+    }
+
+    .navbar-toggler {
+        padding-right: 0px;
+    }
+
+    footer {
+        padding: 0px 10px 0px;
+        nav ul {
+            padding: 0%;
+            li:last-child {
+                margin-right: 0px;
+            }
+        }
+    }
+
+    h1 {
+        padding-left: 5px;
+    }
+
+    .menu--mobile {
+        display: block;
+        width: 45px;
+        height: 45px;
+    }
+
+    .div__cards {
+        flex-direction: column;
+        align-items: center;
+        padding: auto 0px;
+        width: 100%;
+    }
+
+    .card--alt {
+        display: none;
+    }
+
+    .principal {
+        display: flex;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        .container-fluid {
+            flex-direction: column-reverse;
+            text-align: center;
+            padding: 0px 10px 5px; 
+            margin: 4px 15px 0px;
+            nav ul {
+                padding: 0%; 
+                li {
+                    margin: 4px 15px 0px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        height: auto;
+        padding: 10px 0px;
+        ul {
+            padding-top: 10px; 
+            li {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+        }
+        .container-fluid {
+            padding: 0%;
+        }
+    }
+
+    .nav__logo {
+        margin-left: 0px;
+        h1 {
+            padding-left: 0px;
+        }
+    }
+
+    .navbar-toggler {
+        padding-right: 0px;
+    }
+
+    .carousel__title {
+        font-size: 45px;
+    }
+
+    .carousel__text{
+        width: 60%;
+        padding: 20px 0%;
+        margin: auto;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        width: 20%;
+    }
+
+    .div__text {
+        text-align: center;
+        padding: 20px 0%;
+    }
+
+    .div__title--alt {
+        margin-top: 150px;
+    }
+
+    .title {
+        margin: 0%;
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .div__cards {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        height: auto; 
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+        img {
+            height: 200px;
+        }
+    }
+
+    .card__title {
+        font-size: 30px;
+    }
+
+    .card__button {
+        margin: 15px auto;
+    }
+
+    .card--alt {
+        display: none;
+    }
+
+    .div__carousel {
+        width: 100%;
+        padding-left: 0%;
+        padding-right: 0%;
+        padding-bottom: 110px;
+        margin-top: 25px;
+    }
+
+    .principal {
+        display: flex;
+    }
+
+    .div__paragraph {
+        width: 90%;
+        padding: 20px 0%;
+        margin: auto;
+    }
+
+    h4 {
+        font-size: 30px;
+    }
+
+    .div__paragraph p {
+        font-size: 25px;
+    }
+
+    .btn__top {
+        display: none;
+    }
+
+    footer {
+        .container-fluid {
+            flex-direction: column-reverse;
+            text-align: center;
+            padding: 0px 0px 5px; 
+            margin: auto;
+            p {
+                font-size: x-large;
+            }
+            nav ul li a{
+                margin: 4px 15px 0px;
+                display: flex;
+                justify-content: center;
+                img { 
+                    margin: 0%;
+                }
+            }
+        }
+    }
+}

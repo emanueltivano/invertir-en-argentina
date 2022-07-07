@@ -1,0 +1,30 @@
+/*Footer*/
+
+footer{
+    .container-fluid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0%;
+        background: #fff;
+        grid-area: footer;
+    } 
+    p {
+        font-size: large;
+        font-weight: 500;
+    } 
+    nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 15px 0px;
+        li {
+            margin-left: 30px;
+            margin-top: 4px;
+            &:last-child {
+                margin-right: 20px;
+            }
+        }
+    }
+}

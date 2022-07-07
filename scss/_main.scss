@@ -1,0 +1,227 @@
+/*Main*/
+
+main {
+    grid-area: main;
+}
+
+h3 {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    margin: 0px 20px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.40);
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.40);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.40);
+    img {
+        width: 100%;
+        height: 50%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .placeholder-wave {
+        width: 100%;
+        margin: 0%;
+        padding: 0px 15px;
+    }
+}
+
+.card__title {
+    text-align: center;
+    font-size: x-large;
+    margin: 15px 0px;
+}
+
+.div__carousel .card .placeholder-wave {
+    width: 100%;
+    margin: 0%;
+    padding: 0px 15px 15px;
+}
+
+.card__button {
+    cursor: pointer;
+    padding: 10px 15px;
+    color: #fff;
+    border: #0b0f91 2px solid;
+    background-color: #0b0f91;
+    margin: auto;
+    font-weight: 600;
+    font-size: medium;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.40);
+    -webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.40);
+    -moz-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.40);
+    transition-duration: 0.25s;
+    &:hover {
+        background-color: #1016d8;
+        border: #1016d8 2px solid;
+    }
+}
+
+.div__instrument {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 125px);
+}
+
+.bg__stocks,
+.bg__bonds,
+.bg__etf,
+.bg__options {
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(45%);
+    -webkit-filter: brightness(45%);
+    -moz-filter: brightness(45%);
+}
+
+.bg__stocks {
+    background-image: url($bg-stocks);
+}
+
+.bg__bonds {
+    background-image: url($bg-bonds);
+}
+
+.bg__etf {
+    background-image: url($bg-etf);
+}
+
+.bg__options {
+    background-image: url($bg-options);
+}
+
+.div__content {
+    position: absolute;
+    top: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    mix-blend-mode: screen;
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 25px;
+    } 
+    img {
+        cursor: pointer;
+    }
+}
+
+.div__title {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.div__text {
+    color: #fff;
+    font-size: x-large;
+    margin: 25px;
+    padding: 0% 75px;
+}
+
+.div__link {
+    cursor: pointer;
+    font-size: larger;
+    background: none;
+    padding: 10px 20px;
+    border: #fff solid 2px;
+    border-radius: 10px;
+    margin-top: 10px;
+    mix-blend-mode: screen;
+    background-color: white;
+    color: black;
+    font-weight: 900 !important;
+    mix-blend-mode: screen;
+    transition: 0.25s;
+    &:hover {
+        background-color: transparent;
+        color: #fff;
+        font-weight: 400 !important;
+    }
+}
+
+.div__title--alt {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.div__carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 125px;
+    padding-right: 125px;
+    img {
+        cursor: pointer;
+    }
+}
+
+.card--alt {
+    width: 315px;
+    height: auto;
+    padding: 20px 20px 25px; 
+    .card__title {
+        margin-top: 15px;
+    }
+    .card__text {
+        margin: 5px 0px 20px;
+        padding: 5px;
+    }
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: larger;
+}
+
+.div__paragraph p {
+    font-size: large;
+}
+
+.p--bottom {
+    position: static;
+}
+
+.btn__top {
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    margin-left: calc(100vw - 80px);
+    margin-bottom: 20px;
+    border: #0b0f91 3px solid;
+    border-radius: 15px; 
+    img {
+        width: 50px;
+        height: 50px;
+    }
+}
