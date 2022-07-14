@@ -2,6 +2,26 @@
 
 main {
     grid-area: main;
+    &:before {
+        content: "";
+        background-size: contain;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: calc(100vh - 120px);
+        z-index: 999;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    main::before {
+        background-image: url(../assets/images/header.svg);
+        background-position: bottom;
+        background-size: auto;
+        background-repeat: no-repeat;
+        height: 135px;
+    }
 }
 
 h3 {
@@ -10,11 +30,8 @@ h3 {
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
+    @include flex (column, space-between, center);
+    background-color: map-get($estilos , secondaryColor );
     width: 350px;
     height: 350px;
     border-radius: 20px;
@@ -50,9 +67,9 @@ h3 {
 .card__button {
     cursor: pointer;
     padding: 10px 15px;
-    color: #fff;
-    border: #0b0f91 2px solid;
-    background-color: #0b0f91;
+    color: map-get($estilos , secondaryColor );
+    border: map-get($estilos , mainColor ) 2px solid;
+    background-color: map-get($estilos , mainColor );
     margin: auto;
     font-weight: 600;
     font-size: medium;
@@ -62,8 +79,8 @@ h3 {
     -moz-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.40);
     transition-duration: 0.25s;
     &:hover {
-        background-color: #1016d8;
-        border: #1016d8 2px solid;
+        background-color: map-get($estilos , hoverColor );
+        border: map-get($estilos , hoverColor ) 2px solid;
     }
 }
 
@@ -88,20 +105,19 @@ h3 {
     -moz-filter: brightness(45%);
 }
 
-.bg__stocks {
-    background-image: url($bg-stocks);
-}
+/*Aplicando un mapa*/
 
-.bg__bonds {
-    background-image: url($bg-bonds);
-}
+$backgrounds:(
+    stocks:$bg-stocks,
+    bonds:$bg-bonds,
+    etf:$bg-etf,
+    options:$bg-options
+);
 
-.bg__etf {
-    background-image: url($bg-etf);
-}
-
-.bg__options {
-    background-image: url($bg-options);
+@each $name, $bg in $backgrounds {
+    .bg__#{$name}{
+        background-image: url($bg);
+    }
 }
 
 .div__content {
@@ -111,15 +127,10 @@ h3 {
     width: 100%;
     height: 100%;
     z-index: 9;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include flex (inherit, space-around, center);
     mix-blend-mode: screen;
     div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex (column, center, center);
         padding-bottom: 25px;
     } 
     img {
@@ -128,14 +139,14 @@ h3 {
 }
 
 .div__title {
-    color: #fff;
+    color: map-get($estilos , secondaryColor );
     font-size: 50px;
     font-weight: 500;
     margin-bottom: 0px;
 }
 
 .div__text {
-    color: #fff;
+    color: map-get($estilos , secondaryColor );
     font-size: x-large;
     margin: 25px;
     padding: 0% 75px;
@@ -146,18 +157,18 @@ h3 {
     font-size: larger;
     background: none;
     padding: 10px 20px;
-    border: #fff solid 2px;
+    border: map-get($estilos , secondaryColor ) solid 2px;
     border-radius: 10px;
     margin-top: 10px;
     mix-blend-mode: screen;
-    background-color: white;
+    background-color: map-get($estilos , secondaryColor );
     color: black;
     font-weight: 900 !important;
     mix-blend-mode: screen;
     transition: 0.25s;
     &:hover {
         background-color: transparent;
-        color: #fff;
+        color: map-get($estilos , secondaryColor );
         font-weight: 400 !important;
     }
 }
@@ -168,9 +179,7 @@ h3 {
 }
 
 .div__carousel {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    @include flex (inherit, space-around, center);
     padding-left: 125px;
     padding-right: 125px;
     img {
@@ -179,6 +188,7 @@ h3 {
 }
 
 .card--alt {
+    @extend .card;
     width: 315px;
     height: auto;
     padding: 20px 20px 25px; 
@@ -209,16 +219,14 @@ h4 {
 
 .btn__top {
     position: sticky;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex (inherit, center, center);
     bottom: 20px;
     width: 50px;
     height: 50px;
     padding: 10px;
     margin-left: calc(100vw - 80px);
     margin-bottom: 20px;
-    border: #0b0f91 3px solid;
+    border: map-get($estilos , mainColor ) 3px solid;
     border-radius: 15px; 
     img {
         width: 50px;

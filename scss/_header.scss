@@ -8,7 +8,7 @@ header {
 .carousel--bg {
     position: relative;
     width: 100%;
-    height: calc(100vh - 190px);
+    height: calc(100vh - 75px);
     background-image: url($bg-header);
     background-attachment: fixed;
     background-position: center;
@@ -26,9 +26,7 @@ header {
     width: 100%;
     height: calc(100vh - 190px);
     z-index: 9;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include flex (inherit, space-around, center);
     mix-blend-mode: screen;
 }
 
@@ -52,7 +50,7 @@ header {
 }
 
 .carousel__title {
-    color: #fff;
+    color: map-get($estilos , secondaryColor );
     font-size: 50px;
     font-weight: 500;
     margin-bottom: 0px;
@@ -60,7 +58,7 @@ header {
 }
 
 .carousel__text {
-    color: #fff;
+    color: map-get($estilos , secondaryColor );
     font-size: x-large;
     margin: 25px 40px;
     text-align: center;
@@ -71,18 +69,18 @@ header {
     font-size: larger;
     background: none;
     padding: 10px 20px;
-    border: #fff solid 2px;
+    border: map-get($estilos , secondaryColor ) solid 2px;
     margin-top: 10px;
     border-radius: 10px;
     mix-blend-mode: screen;
-    background-color: white;
+    background-color: map-get($estilos , secondaryColor );
     color: black;
     font-weight: 900 !important;
     mix-blend-mode: screen;
     transition: 0.25s;
     &:hover {
         background-color: transparent;
-        color: #fff;
+        color: map-get($estilos , secondaryColor );
         font-weight: 400 !important;
     }
 }
@@ -97,6 +95,6 @@ header {
 
 header {
     .div__instrument {
-        height: calc(100vh - 190px);
+        height: calc(100vh - 75px);
     }
 }

@@ -1,6 +1,18 @@
 /*Variables*/
 
-$main-color: #0b0f91;
+@mixin flex ($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+$estilos: (
+    mainColor: #0b0f91,
+    secondaryColor:#FFFDFA,
+    hoverColor: #1016d8
+);
+
 $bg-header: "/assets/images/header.jpg";
 $bg-stocks: "/assets/images/acciones.jpg";
 $bg-bonds: "/assets/images/bonos.jpg";

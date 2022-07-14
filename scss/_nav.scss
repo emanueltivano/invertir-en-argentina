@@ -19,17 +19,17 @@
 }
 
 h1 {
-    color: #fff;
+    color: map-get($estilos , secondaryColor);
     font-weight: 500;
     font-size: 30px;
     margin-top: 2px;
     margin-bottom: 0%;
 }
 
-.navbar{
-    background-color: $main-color;
-    color: #fff;
+.navbar {
     height: 75px;
+    background-color: map-get($estilos , mainColor );
+    color: map-get($estilos , secondaryColor );
     ul li { 
         padding: 15px 20px;
     }
@@ -37,7 +37,7 @@ h1 {
 
 .nav__link {
     position: relative;
-    color: #fff;
+    color: map-get($estilos , secondaryColor );
     font-size: larger;
     &:after {
         position: absolute;
@@ -48,7 +48,7 @@ h1 {
         left: 0;
         right: 0;
         width: 0%;
-        background: #fff;
+        background: map-get($estilos , secondaryColor );
     
         -o-transition: .25s;
         -ms-transition: .25s;
@@ -73,7 +73,7 @@ h1 {
     left: 0;
     right: 0;
     width: 70%;
-    background: #fff;
+    background: map-get($estilos , secondaryColor );
 }
 
 .navbar-toggler,

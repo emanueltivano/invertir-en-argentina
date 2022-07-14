@@ -28,7 +28,7 @@ body {
 a {
     text-decoration: none;
     &:hover {
-        color: #fff;
+        color: map-get($estilos , secondaryColor );
     }
 }
 
@@ -42,9 +42,7 @@ a {
         padding: 10px; 
         ul {
             padding-top: 10px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            @include flex (row, space-between, center);
             padding-right: 5px; 
             li {
                 padding: 15px 0px;

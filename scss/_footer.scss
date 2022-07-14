@@ -2,11 +2,9 @@
 
 footer{
     .container-fluid {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex (inherit, space-between, center);
         margin: 0%;
-        background: #fff;
+        background: map-get($estilos , secondaryColor );
         grid-area: footer;
     } 
     p {
@@ -15,9 +13,7 @@ footer{
     } 
     nav ul {
         list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex (inherit, center, center);
         margin: 15px 0px;
         li {
             margin-left: 30px;
