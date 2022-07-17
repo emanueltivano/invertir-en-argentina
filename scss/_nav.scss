@@ -1,21 +1,17 @@
 /*Nav*/
 
-#svg1 {
-    animation: svgAnimation1;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
+$animations:(
+    1:svgAnimation1,
+    2:svgAnimation2,
+    3:svgAnimation3
+);
 
-#svg2 {
-    animation: svgAnimation2;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-
-#svg3 {
-    animation: svgAnimation3;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+@each $number, $animation in $animations {
+    #svg#{$number}{
+        animation: $animation;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
 }
 
 h1 {

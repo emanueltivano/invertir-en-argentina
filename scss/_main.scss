@@ -2,25 +2,74 @@
 
 main {
     grid-area: main;
+}
+
+.container__styled {
+    position: relative;
+    @include flex (column, center, center);
     &:before {
         content: "";
         background-size: contain;
         position: absolute;
         width: 100%;
         left: 0;
-        top: calc(100vh - 120px);
+        top: -130px;
+        z-index: 999;
+    }
+    &::after {
+        content: "";
+        background-size: contain;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: -170px;
         z-index: 999;
     }
 }
 
+.container__styled--alt {
+    position: relative;
+    &:before {
+        content: "";
+        background-size: contain;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: -130px;
+        z-index: 999;
+    }}
+
 
 @media screen and (min-width: 1024px) {
-    main::before {
-        background-image: url(../assets/images/header.svg);
-        background-position: bottom;
-        background-size: auto;
-        background-repeat: no-repeat;
-        height: 135px;
+    .container__styled {
+        padding: 5px 0px;
+        &:nth-child(n+2){
+            height: calc(100vh - 140px);
+        }
+        &:before {
+            background-image: url(../assets/images/top.svg);
+            background-position: bottom;
+            background-size: auto;
+            background-repeat: no-repeat;
+            height: 140px;
+        }
+        &::after{
+            background-image: url(../assets/images/bottom.svg);
+            background-position: bottom;
+            background-size: auto;
+            background-repeat: no-repeat;
+            height: 140px;
+        }
+    }
+    .container__styled--alt {
+        padding-top: 5px;
+        &:before {
+            background-image: url(../assets/images/top.svg);
+            background-position: bottom;
+            background-size: auto;
+            background-repeat: no-repeat;
+            height: 140px;
+        }
     }
 }
 
@@ -87,7 +136,11 @@ h3 {
 .div__instrument {
     position: relative;
     width: 100%;
-    height: calc(100vh - 125px);
+    height: calc(100vh + 140px);
+}
+
+.div__instrument:last-child {
+    height: calc(100vh - 75px);
 }
 
 .bg__stocks,
