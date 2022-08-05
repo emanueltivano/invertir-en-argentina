@@ -40,7 +40,7 @@ main {
     }}
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
     .container__styled {
         padding: 5px 0px;
         &:nth-child(n+2){
@@ -83,6 +83,7 @@ h3 {
     background-color: map-get($estilos , secondaryColor );
     width: 350px;
     height: 350px;
+    border: none;
     border-radius: 20px;
     margin: 0px 20px;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.40);
@@ -196,6 +197,7 @@ $backgrounds:(
     font-size: 50px;
     font-weight: 500;
     margin-bottom: 0px;
+    text-align: center;
 }
 
 .div__text {
@@ -233,8 +235,6 @@ $backgrounds:(
 
 .div__carousel {
     @include flex (inherit, space-around, center);
-    padding-left: 125px;
-    padding-right: 125px;
     img {
         cursor: pointer;
     }
@@ -258,12 +258,19 @@ $backgrounds:(
     margin-bottom: 20px;
 }
 
-h4 {
-    font-size: larger;
-}
-
-.div__paragraph p {
-    font-size: large;
+.div__paragraph {
+    margin-bottom: 50px;
+    h4 {
+        font-size: x-large;
+        color: map-get($estilos , mainColor );
+    }
+    p {
+        text-indent: 5px;
+        font-size: large;
+    }
+    &:last-child{
+        margin-bottom: 0%;
+    }
 }
 
 .p--bottom {
