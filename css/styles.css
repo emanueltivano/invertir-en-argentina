@@ -255,8 +255,8 @@ h3 {
   justify-content: space-between;
   align-items: center;
   background-color: #FFFDFA;
-  width: 350px;
-  height: 350px;
+  width: 360px;
+  height: 360px;
   border: none;
   border-radius: 20px;
   margin: 0px 20px;
@@ -268,20 +268,14 @@ h3 {
     height: 50%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px; }
-  .card .placeholder-wave, .card--alt .placeholder-wave {
-    width: 100%;
-    margin: 0%;
-    padding: 0px 15px; }
 
 .card__title {
   text-align: center;
   font-size: x-large;
   margin: 15px 0px; }
 
-.div__carousel .card .placeholder-wave, .div__carousel .card--alt .placeholder-wave {
-  width: 100%;
-  margin: 0%;
-  padding: 0px 15px 15px; }
+.card__text {
+  font-size: 18px; }
 
 .card__button {
   cursor: pointer;
